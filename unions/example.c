@@ -22,16 +22,22 @@ struct car_data {
 struct 
 {
     char *name;
-    enum symbolType type;
+    //enum symbolType type;
     union
     {int i;
     float f;
     char c;
     } data;
-}table [entries];
+}table /*[entries]*/;
 int main()
 {
     union car car1, car2, *car3;//create 2 unions and a pointerf
-    printf("Memory used: %zu\n", sizeof(car1));
+    car1.i_value=10;
+    printf("i value used: %d\n",car1.i_value);
+    car2.f_value = 255.90;
+    printf("f value used: %.2f\n",car2.f_value);
+    car1.f_value = 199.99;
+    printf("i value used: %d\n",car1.i_value);
+    printf("f value used: %.2f\n",car1.f_value);
     return 0;
 }
