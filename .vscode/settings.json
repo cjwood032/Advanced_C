@@ -2,6 +2,7 @@
     "files.associations": {
         "string": "c",
         "iosfwd": "c",
-        "algorithm": "c"
+        "algorithm": "c",
+        "mylib.h": "c"
     }
 }
