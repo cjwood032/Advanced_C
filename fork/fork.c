@@ -5,7 +5,7 @@
 #define MAX_COUNT 10
 #define BUF_SIZE 100
 
-void main(void){
+int main(void){
     pid_t pid;
     char buf[BUF_SIZE];
     fork();
@@ -15,4 +15,5 @@ void main(void){
         sprintf(buf, "this line is from pid %d, value =%d\n",pid,i);
         write(1,buf,strlen(buf));
     }
+    return 0;
 }
