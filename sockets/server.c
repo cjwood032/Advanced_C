@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
             break;
         }
         printf("Client reply:%s\n",client_message);
-        if(strcmp(pMessage,client_message)==0)
+        if(strncmp(pMessage,client_message,5)==0)
         {
             strcpy(message,"Hi there!");
         }
