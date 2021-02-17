@@ -44,9 +44,8 @@ void * functionCount1() {
 void *functionCount2() {
     for(;;)
     {
-        sleep(1);
         pthread_mutex_lock(&condition_mutex);
-        while (count < COUNT_HALT1 || count > COUNT_HALT2)
+        if(count < COUNT_HALT1 || count > COUNT_HALT2)
         {
             pthread_cond_signal(&condition_cond);
         }
