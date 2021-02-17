@@ -3,6 +3,8 @@
         "string": "c",
         "iosfwd": "c",
         "algorithm": "c",
-        "mylib.h": "c"
+        "mylib.h": "c",
+        "stdio.h": "c",
+        "pthread.h": "c"
     }
 }
